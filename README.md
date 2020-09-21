@@ -21,5 +21,5 @@ A few thoughts on the custom page:
 * At the end I added some site and unify classes, especially on containers, buttons, and with some of the gradients.
 
 Some food for thoughts:
-    * In regards to using hover state to hide text until hover. That can be an awesome effect, and it's nitpicky on my part, but the page might also be dinged by Search Engines for hiding text on the page (a common tactic to game SEO, obviously not what you're doing here, but the Google Bot might not know that).
-    * In the product widgets, I might argue that adding each product as its own image might give a better SEO impact, as the alt tags can have the product names and uses in them.
+   * In regards to using hover state to hide text until hover. That can be an awesome effect, and it's nitpicky on my part, but the page might also be dinged by Search Engines for hiding text on the page (a common tactic to game SEO, obviously not what you're doing here, but the Google Bot might not know that).
+   * In the product widgets, I might argue that adding each product as its own image might give a better SEO impact, as the alt tags can have the product names and uses in them.
