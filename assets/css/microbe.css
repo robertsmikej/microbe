@@ -1,0 +1,1177 @@
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before {
+  content: " ";
+  display: block;
+  background: #fff;
+  position: absolute;
+  z-index: 30;
+  -webkit-box-shadow: 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: 0 0 12px rgba(51, 51, 51, .5)
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-horizontal .twentytwenty-handle:before {
+  width: 3px;
+  height: 9999px;
+  left: 50%;
+  margin-left: -1.5px
+}
+
+.twentytwenty-vertical .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before {
+  width: 9999px;
+  height: 3px;
+  top: 50%;
+  margin-top: -1.5px
+}
+
+.twentytwenty-after-label,
+.twentytwenty-before-label,
+.twentytwenty-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+
+.twentytwenty-after-label,
+.twentytwenty-before-label,
+.twentytwenty-overlay {
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  transition-duration: .5s
+}
+
+.twentytwenty-after-label,
+.twentytwenty-before-label {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity
+}
+
+.twentytwenty-after-label:before,
+.twentytwenty-before-label:before {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: .1em
+}
+
+.twentytwenty-after-label:before,
+.twentytwenty-before-label:before {
+  position: absolute;
+  background: rgba(255, 255, 255, .2);
+  line-height: 38px;
+  padding: 0 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px
+}
+
+.twentytwenty-horizontal .twentytwenty-after-label:before,
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+  top: 50%;
+  margin-top: -19px
+}
+
+.twentytwenty-vertical .twentytwenty-after-label:before,
+.twentytwenty-vertical .twentytwenty-before-label:before {
+  left: 50%;
+  margin-left: -45px;
+  text-align: center;
+  width: 90px
+}
+
+.twentytwenty-down-arrow,
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow,
+.twentytwenty-up-arrow {
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute
+}
+
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow {
+  top: 50%;
+  margin-top: -6px
+}
+
+.twentytwenty-down-arrow,
+.twentytwenty-up-arrow {
+  left: 50%;
+  margin-left: -6px
+}
+
+.twentytwenty-container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none
+}
+
+.twentytwenty-container img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  display: block
+}
+
+.twentytwenty-container.active .twentytwenty-overlay,
+.twentytwenty-container.active :hover.twentytwenty-overlay {
+  background: rgba(0, 0, 0, 0)
+}
+
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label,
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
+.twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-after-label,
+.twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-before-label {
+  opacity: 0
+}
+
+.twentytwenty-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+.twentytwenty-before-label {
+  opacity: 0
+}
+
+.twentytwenty-before-label:before {
+  content: attr(data-content)
+}
+
+.twentytwenty-after-label {
+  opacity: 0
+}
+
+.twentytwenty-after-label:before {
+  content: attr(data-content)
+}
+
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+  left: 10px
+}
+
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+  right: 10px
+}
+
+.twentytwenty-vertical .twentytwenty-before-label:before {
+  top: 10px
+}
+
+.twentytwenty-vertical .twentytwenty-after-label:before {
+  bottom: 10px
+}
+
+.twentytwenty-overlay {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-property: background;
+  background: rgba(0, 0, 0, 0);
+  z-index: 25
+}
+
+.twentytwenty-overlay:hover {
+  background: rgba(0, 0, 0, .5)
+}
+
+.twentytwenty-overlay:hover .twentytwenty-after-label {
+  opacity: 1
+}
+
+.twentytwenty-overlay:hover .twentytwenty-before-label {
+  opacity: 1
+}
+
+.twentytwenty-before {
+  z-index: 20
+}
+
+.twentytwenty-after {
+  z-index: 10
+}
+
+.twentytwenty-handle {
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -22px;
+  border: 3px solid #fff;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  -webkit-box-shadow: 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: 0 0 12px rgba(51, 51, 51, .5);
+  z-index: 40;
+  cursor: pointer
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:before {
+  bottom: 50%;
+  margin-bottom: 22px;
+  -webkit-box-shadow: 0 3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: 0 3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: 0 3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5)
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  top: 50%;
+  margin-top: 22px;
+  -webkit-box-shadow: 0 -3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: 0 -3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: 0 -3px 0 #fff, 0 0 12px rgba(51, 51, 51, .5)
+}
+
+.twentytwenty-vertical .twentytwenty-handle:before {
+  left: 50%;
+  margin-left: 22px;
+  -webkit-box-shadow: 3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: 3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: 3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5)
+}
+
+.twentytwenty-vertical .twentytwenty-handle:after {
+  right: 50%;
+  margin-right: 22px;
+  -webkit-box-shadow: -3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  -moz-box-shadow: -3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5);
+  box-shadow: -3px 0 0 #fff, 0 0 12px rgba(51, 51, 51, .5)
+}
+
+.twentytwenty-left-arrow {
+  border-right: 6px solid #fff;
+  left: 50%;
+  margin-left: -17px
+}
+
+.twentytwenty-right-arrow {
+  border-left: 6px solid #fff;
+  right: 50%;
+  margin-right: -17px
+}
+
+.twentytwenty-up-arrow {
+  border-bottom: 6px solid #fff;
+  top: 50%;
+  margin-top: -17px
+}
+
+.twentytwenty-down-arrow {
+  border-top: 6px solid #fff;
+  bottom: 50%;
+  margin-bottom: -17px
+}
+
+.table-striped tbody td {
+  border-top: 1px solid #dee2e6
+}
+
+.shopify-challenge__container {
+  margin-top: 300px !important;
+  margin-bottom: 200px !important
+}
+
+.shopify-challenge__button {
+  color: #fff;
+  background-color: #72c02c
+}
+
+.shopify-challenge__button.active,
+.shopify-challenge__button:hover {
+  border-color: #8cd54a;
+  background-color: #8cd54a
+}
+
+.shopify-challenge__button.active,
+.shopify-challenge__button:focus,
+.shopify-challenge__button:hover {
+  color: #fff
+}
+
+.hide {
+  display: none !important;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.g-bg-primary {
+  background-color: #6ac9c9 !important;
+}
+
+.g-color-microbe {
+  color: #6ac9c9 !important;
+}
+
+/* Product Colors */
+.g-bg-microbe,
+.u-btn-microbe {
+  color: #fff !important;
+  background-color: #6ac9c9 !important;
+}
+
+.u-btn-microbe:hover,
+.u-btn-microbe.active {
+  border-color: #76dbdb !important;
+  background-color: #76dbdb !important;
+}
+
+.u-btn-microbe:hover,
+.u-btn-microbe:focus,
+.u-btn-microbe.active {
+  color: #fff;
+}
+
+.g-brd-microbe {
+  border-color: #6ac9c9 !important;
+}
+
+
+.g-color-truedetox {
+  color: #27aae1 !important;
+}
+
+/* Product Colors */
+.g-bg-truedetox,
+.u-btn-truedetox {
+  color: #fff !important;
+  background-color: #27aae1 !important;
+}
+
+.g-color-microbe-red {
+  color: #ce646b !important;
+}
+
+.g-bg-microbe-red,
+.u-btn-microbe-red {
+  color: #fff !important;
+  background-color: #ce646b !important;
+}
+
+.g-color-microbe-red--hover:hover {
+  color: #ce646b !important;
+}
+
+.u-btn-microbe-red:hover,
+.u-btn-microbe-red.active {
+  border-color: #b74d54 !important;
+  background-color: #b74d54 !important;
+}
+
+.u-btn-microbe-red:hover,
+.u-btn-microbe-red:focus,
+.u-btn-microbe-red.active {
+  color: #fff;
+}
+
+.g-brd-microbe-red {
+  border-color: #b74d54 !important;
+}
+
+.u-btn-outline-microbe-red {
+  color: #ce646b;
+  border-color: #ce646b;
+  background-color: transparent;
+}
+
+.u-btn-outline-microbe-red:focus,
+.u-btn-outline-microbe-red.active {
+  color: #fff;
+  background-color: #ce646b;
+}
+
+.u-btn-outline-microbe-red:hover {
+  color: #fff;
+  background-color: #ce646b;
+}
+
+
+
+.u-btn-microbe-darkgrey:hover,
+.u-btn-microbe-darkgrey.active {
+  border-color: #666667 !important;
+  background-color: #666667 !important;
+}
+
+
+.g-bg-microbe-secondary,
+.u-btn-microbe-secondary {
+  color: #fff !important;
+  background-color: #89D2DA !important;
+}
+
+.g-bg-microbe-tertiary,
+.u-btn-microbe-tertiary {
+  color: #fff !important;
+  background-color: #37A19C !important;
+}
+
+.g-bg-microbe-1,
+.u-btn-microbe-1 {
+  color: #fff !important;
+  background-color: #232838 !important;
+}
+
+.g-bg-microbe-2,
+.u-btn-microbe-2 {
+  color: #fff !important;
+  background-color: #4C211E !important;
+}
+
+.g-bg-microbe-3,
+.u-btn-microbe-3 {
+  color: #fff !important;
+  background-color: #593A30 !important;
+}
+
+.g-bg-microbe-4,
+.u-btn-microbe-4 {
+  color: #fff !important;
+  background-color: #21352E !important;
+}
+
+.g-bg-microbe-5,
+.u-btn-microbe-5 {
+  color: #fff !important;
+  background-color: #35322F !important;
+}
+
+.g-bg-microbe-6,
+.u-btn-microbe-6 {
+  color: #fff !important;
+  background-color: #382844 !important;
+}
+
+.g-bg-microbe-light-1,
+.u-btn-microbe-light-1 {
+  color: #000 !important;
+  background-color: #D6DEE8 !important;
+}
+
+.g-bg-microbe-light-2,
+.u-btn-microbe-light-2 {
+  color: #000 !important;
+  background-color: #E8D1D1 !important;
+}
+
+.g-bg-microbe-light-3,
+.u-btn-microbe-light-3 {
+  color: #000 !important;
+  background-color: #E5D6C7 !important;
+}
+
+.g-bg-microbe-light-4,
+.u-btn-microbe-light-4 {
+  color: #000 !important;
+  background-color: #DFEAE4 !important;
+}
+
+.g-bg-microbe-light-5,
+.u-btn-microbe-light-5 {
+  color: #000 !important;
+  background-color: #E0DAD5 !important;
+}
+
+.g-bg-microbe-light-6,
+.u-btn-microbe-light-6 {
+  color: #000 !important;
+  background-color: #DCD6E5 !important;
+}
+
+
+.g-bg-secondary {
+  background-color: #e6e7e8 !important;
+}
+
+.g-bg-microbe-lightgrey,
+.u-btn-microbe-lightgrey-v1 {
+  color: #000 !important;
+  background-color: #e6e7e8 !important;
+}
+
+.g-bg-microbe-grey,
+.u-btn-microbe-grey {
+  color: #fff !important;
+  background-color: #404041 !important;
+}
+
+.u-btn-microbe-grey:hover,
+.u-btn-microbe-grey.active {
+  border-color: #5c5c5c !important;
+  background-color: #5c5c5c !important;
+}
+
+.g-bg-microbe-darkgrey,
+.u-btn-microbe-darkgrey {
+  color: #fff !important;
+  background-color: #414042 !important;
+}
+
+
+.g-bg-microbe-lightgrey-cta {
+  color: #000 !important;
+  background-color: #e6e7e8 !important;
+}
+
+.g-bg-microbe-lightgrey-cta:hover {
+  background-color: #FFF !important;
+}
+
+.display-6 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.display-7 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.display-8 {
+  font-size: 2.3rem;
+  line-height: 1.1;
+}
+
+
+.g-bg-microbe-mimosa {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500027/microbe/brand_images/Mimosa_Pudica_Seed_-_50.png);
+}
+
+.g-bg-microbe-lymphatic {
+  background-repeat: no-repeat;
+  background-position-y: -10px;
+  background-position-x: -10px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500026/microbe/brand_images/Lymphatic_Support_-_50.png);
+}
+
+.g-bg-microbe-liver {
+  background-repeat: no-repeat;
+  background-position-y: -20px;
+  background-position-x: -570px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500026/microbe/brand_images/Kidney_Liver_-_50.png);
+}
+
+.g-bg-microbe-inflamma {
+  background-repeat: no-repeat;
+  background-position-y: 90px;
+  background-position-x: -440px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500025/microbe/brand_images/Inflamma_Calm_-_50.png);
+}
+
+.g-bg-microbe-borr {
+  background-repeat: no-repeat;
+  background-position-y: 120px;
+  background-position-x: -130px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500025/microbe/brand_images/Immune_Borr_-_50.png);
+}
+
+.g-bg-microbe-boost {
+  background-repeat: no-repeat;
+  background-position-y: -60px;
+  background-position-x: -40px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500024/microbe/brand_images/Immune_Boost_-_50.png);
+}
+
+.g-bg-microbe-bart {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500024/microbe/brand_images/Immune_Bart_-_50.png);
+}
+
+.g-bg-microbe-bab {
+  background-repeat: no-repeat;
+  background-position-y: 90px;
+  background-position-x: -200px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500023/microbe/brand_images/Immune_Bab_-_50.png);
+}
+
+.g-bg-microbe-foundation {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500022/microbe/brand_images/Foundation_-_50.png);
+}
+
+.g-bg-microbe-formula-2 {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500022/microbe/brand_images/Formula_2_-_50.png);
+}
+
+.g-bg-microbe-formula-1 {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500021/microbe/brand_images/Formula_1_-_50.png);
+}
+
+.g-bg-microbe-biotox {
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-position-x: -190px;
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1590500021/microbe/brand_images/BioTox_-_50.png);
+}
+
+.g-color-microbe-phase-1 {
+  color: #f79621 !important;
+}
+
+.g-color-microbe-phase-2 {
+  color: #0973ba !important;
+}
+
+.g-color-microbe-phase-3 {
+  color: #673091 !important;
+}
+
+.g-color-microbe-phase-4 {
+  color: #289646 !important;
+}
+
+.g-color-microbe-phase-5 {
+  color: #8dc63f !important;
+}
+
+.g-bg-microbe-phase-1,
+.u-btn-microbe-phase-1 {
+  color: #fff !important;
+  background-color: #f79621 !important;
+  border-color: #f79621 !important;
+}
+
+.g-bg-microbe-phase-2,
+.u-btn-microbe-phase-2 {
+  color: #fff !important;
+  background-color: #0973ba !important;
+  border-color: #0973ba !important;
+}
+
+.g-bg-microbe-phase-3,
+.u-btn-microbe-phase-3 {
+  color: #fff !important;
+  background-color: #673091 !important;
+  border-color: #673091 !important;
+}
+
+.g-bg-microbe-phase-4,
+.u-btn-microbe-phase-4 {
+  color: #fff !important;
+  background-color: #289646 !important;
+  border-color: #289646 !important;
+}
+
+.g-bg-microbe-phase-5,
+.u-btn-microbe-phase-5 {
+  color: #fff !important;
+  background-color: #8dc63f !important;
+  border-color: #8dc63f !important;
+}
+
+.g-brd-microbe-phase-1 {
+  border-color: #f79621 !important;
+}
+
+.g-brd-microbe-phase-2 {
+  border-color: #0973ba !important;
+}
+
+.g-brd-microbe-phase-3 {
+  border-color: #673091 !important;
+}
+
+.g-brd-microbe-phase-4 {
+  border-color: #289646 !important;
+}
+
+.g-brd-microbe-phase-5 {
+  border-color: #8dc63f !important;
+}
+
+/* Purple Gradient */
+.g-bg-microbe-gradient,
+.g-bg-microbe-gradient--after::after {
+  background-image: linear-gradient(to bottom, rgba(133, 209, 216, 1) 100%, rgba(76, 172, 168, 1) 100%);
+  background-repeat: repeat-x;
+}
+
+
+@media (max-width: 767px) {
+  .g-height-60vh--sm {
+    height: 60vh;
+  }
+
+  .g-height-66vh--sm {
+    height: 66vh;
+  }
+
+  .g-height-70vh--sm {
+    height: 70vh;
+  }
+
+  .g-height-75vh--sm {
+    height: 75vh;
+  }
+
+  .g-height-80vh--sm {
+    height: 80vh;
+  }
+
+  .g-height-83vh--sm {
+    height: 83vh;
+  }
+
+  .g-height-85vh--sm {
+    height: 85vh;
+  }
+
+  .g-height-90vh--sm {
+    height: 90vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .g-height-60vh--md {
+    height: 60vh;
+  }
+
+  .g-height-70vh--md {
+    height: 70vh;
+  }
+
+  .g-height-80vh--md {
+    height: 80vh;
+  }
+
+  .g-height-83vh--md {
+    height: 83vh;
+  }
+
+  .g-height-85vh--md {
+    height: 85vh;
+  }
+
+  .g-height-90vh--md {
+    height: 90vh;
+  }
+
+  .g-height-95vh--md {
+    height: 95vh;
+  }
+
+  .g-max-width-250--md {
+    max-width: 250px;
+  }
+
+  .g-max-width-500--md {
+    max-width: 500px;
+  }
+
+  .g-max-height-100 {
+    max-height: 100px;
+  }
+}
+
+.g-max-height-330 {
+  max-height: 330px;
+}
+
+
+#addeventatc1,
+#addeventatc2 {
+  z-index: 0;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.bootstrap-select>.dropdown-toggle {
+  font-weight: 600;
+  padding: 20px;
+  font-size: 17px;
+}
+
+.bootstrap-select .dropdown-menu li a {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-toggle::after {
+  position: relative;
+  top: -5px;
+  font-size: 13px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+  top: 13px;
+}
+
+.collection-dropdown {
+  background-color: #fff !important;
+  padding: 10px !important;
+}
+
+
+
+.product--flags {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+  width: 135px;
+  height: 30px;
+  color: #fff;
+}
+
+.product--flags:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 135px;
+  height: 30px;
+}
+
+.product--flag {
+  position: relative;
+  top: 6px;
+  left: 18px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: left;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.product--flags.new:before {
+  background: #5bc0eb;
+  background: linear-gradient(120deg, #35c8e5, #30b6d1)
+}
+
+.product--flags.sold_out:before {
+  background: #c2c0bc;
+  background: linear-gradient(120deg, #c7c7c7, #b3b3b3)
+}
+
+.product--flags.sale:before {
+  background: #d11739;
+  background: linear-gradient(120deg, #eb2300, #d11739)
+}
+
+.product--flags.best-seller:before {
+  background: #f8b33c;
+  background: linear-gradient(120deg, #f8b33c, )
+}
+
+
+.product--flag.best_seller {
+  padding-bottom: 18px
+}
+
+@media (max-width: 48.125rem) {
+  .product--flag.best_seller {
+    padding-bottom: 15px
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
+}
+
+/*
+     * Off Canvas
+     * --------------------------------------------------
+     */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: -100%;
+    /* 12 columns */
+  }
+
+  .row-offcanvas-right.active .sidebar-offcanvas {
+    right: -50%;
+    /* 6 columns */
+  }
+
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -100%;
+    /* 12 columns */
+  }
+
+  .row-offcanvas-left.active .sidebar-offcanvas {
+    left: -50%;
+    /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%;
+    /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%;
+    /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    /* 6 columns */
+  }
+}
+
+.afterpay-paragraph {
+  font-size: 13px !important;
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+
+
+/*!
+     * Microbe Icons
+     */
+.mf {
+  background-position: center center;
+  height: 52px;
+  line-height: 52px;
+  width: 52px;
+  margin-left: 12px;
+  background-size: 52px;
+  background-repeat: no-repeat
+}
+
+@media (min-width: 768px) {
+  .mf {
+    background-position: center center;
+    height: 64px;
+    line-height: 64px;
+    width: 64px;
+    margin-left: 8px;
+    background-size: 45px;
+    background-repeat: no-repeat
+  }
+
+}
+
+
+
+.mf-prepare {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556282233/icons/prepare.png)
+}
+
+.mf-energy {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/energy.png)
+}
+
+.mf-reduce {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/reduce.png)
+}
+
+
+
+.mf-gut {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/gut.png)
+}
+
+.mf-toxins {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/toxins.png)
+}
+
+.mf-remove {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556282437/icons/remove.png)
+}
+
+
+
+.mf-success {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/success.png)
+}
+
+.mf-build {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556282233/icons/build.png)
+}
+
+.mf-helix {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/helix.png)
+}
+
+
+
+
+
+.mf-deeper {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/deeper.png)
+}
+
+.mf-bind {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556499003/icons/bind.png)
+}
+
+.mf-restore {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1556282233/icons/restore.png)
+}
+
+.mf-liver {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1563911442/icons/liver.png)
+}
+
+.mf-antioxidant {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1563913931/icons/antioxidant.png)
+}
+
+
+
+
+
+.mf-power {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1557231420/icons/power.png)
+}
+
+.mf-thyroid {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542815004/icons/thyroid.png)
+}
+
+.mf-toxins {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542816222/icons/virus.png)
+}
+
+.mf-stomach {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542816615/icons/stomach.png)
+}
+
+.mf-pathways {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542816830/icons/pathways.png)
+}
+
+.mf-nutrition {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542818539/icons/nutrition.png)
+}
+
+.mf-runner {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542820477/icons/runner.png)
+}
+
+.mf-bioactive {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542820841/icons/bioactive.png)
+}
+
+.mf-metals {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542821367/icons/metals.png)
+}
+
+.mf-healing {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542821762/icons/healing.png)
+}
+
+.mf-fatigue {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542821932/icons/fatigue.png)
+}
+
+.mf-memory {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542822077/icons/memory.png)
+}
+
+.mf-immune {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542822257/icons/immune.png)
+}
+
+.mf-mortar {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542822323/icons/mortar.png)
+}
+
+.mf-detox {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542822748/icons/detox.png)
+}
+
+.mf-peristalsis {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542849422/icons/peristalsis.png)
+}
+
+.mf-constipation {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542849825/icons/constipation.png)
+}
+
+.mf-habit {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542850061/icons/habit.png)
+}
+
+.mf-brain {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/v1542850684/icons/brain.png)
+}
+
+.mf-trash {
+  background-image: url(https://res.cloudinary.com/microbe/image/upload/c_scale,w_128/v1587766830/icons/Trash_Icon-01.png)
+}
+
+
+
+.mf-size-32 {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  background-size: 32px
+}
+
+.mf-size-24 {
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  background-size: 24px
+}
