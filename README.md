@@ -17,6 +17,7 @@ A few thoughts on the custom page:
     * I'd maybe also quickly meet with the designer for ideas on how to make already existing images work with mobile.
     * What I ended up with works pretty well for mobile, but it's not 100% ideal!
     * I changed the hover state to visible text for mobile.
+    * In a production environment I'd add a safe guard to ensure that the characters didn't go over 100 characters and ended with an elipses, etc.
     
 * At the end I added some site and unify classes, especially on containers, buttons, and with some of the gradients.
 

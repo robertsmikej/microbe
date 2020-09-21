@@ -239,6 +239,7 @@ body .site__buttons {
     line-height: 1.3em;
     font-weight: 900;
     align-self: center;
+    cursor: pointer;
 }
 
 .tab__widget {
